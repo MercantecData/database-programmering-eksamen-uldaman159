@@ -21,3 +21,5 @@ God Arbejdslyst!!!
 
 
 Peter Nordtoft Olesen
+
+har ændret i alle undtagen logout.php
