@@ -1,10 +1,11 @@
 <?php
 session_start();
-$loggedIn = isset($_SESSION['userID']);
-if($loggedIn) {
-	id = $SESSION['userID'];
+$loggedIn = isset($SESSION['userID']);
+if($loggedIn) 
+{
+	$id = $SESSION['userID'];
 	$conn = mysqli_connect("localhost", "root", "", "databaseexam");
-	$sql = SELECT id, imageURL FROM images WHERE owner = id;
+	$sql = "SELECT id, imageURL FROM images WHERE owner = '$id'";
 	$imageresult = $conn->query($sql);
 }
 ?>
@@ -14,7 +15,8 @@ if($loggedIn) {
 	<title>MercBook</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<style type="text/css">
-		.grid {
+		.grid 
+        {
 			display: grid;
 			grid-template-areas: "topbar login" "myContent myContent";
 			grid-template-columns: auto 135px;
@@ -25,7 +27,8 @@ if($loggedIn) {
 			grid-gap: 20px;
 		}
 
-		.topbar{
+		.topbar
+        {
 			grid-area: topbar;
 			background-color: lightgray;
 			color:grey;
@@ -33,35 +36,42 @@ if($loggedIn) {
 			padding-left: 15px;
 		}
 
-		.login{
+		.login
+        {
 			grid-area: login;
 		}
 
-		.content{
+		.content
+        {
 			grid-area: myContent;
 			background-color: white;
 			padding:10px;
 		}
 
-		.myTextArea {
+		.myTextArea 
+        {
 			min-width: 100px;
 			max-width: 535px;
 		}
 
-		input{
+		input
+        {
 			width: 95%;
 		}
 
-		p {
+		p 
+        {
 			text-align: justify;
 		}
 
-		body {
+		body 
+        {
 			font-family: sans-serif;
 			background-color: darkgrey;
 		}
 
-		.myImage {
+		.myImage 
+        {
 			max-width: 48%;
 			margin: 1%;
 		}
@@ -94,10 +104,12 @@ if($loggedIn) {
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat quis purus ut bibendum. Mauris sit amet lacinia arcu. Vivamus fringilla magna id augue luctus interdum. 
 
 			<?php 
-			if$imageresult) {
+			if($imageresult) 
+            {
 				echo "<h2>Dine Billeder</h2>";
-				while($row = $imageresult->fetch_assoc()) {
-					$url = $row["imageUrl"];
+				while($row = $imageresult->fetch_assoc()) 
+                {
+					$url = $row["imageURL"];
 					echo "<img class = 'myImage' src='$url'>";
 				}
 			} 

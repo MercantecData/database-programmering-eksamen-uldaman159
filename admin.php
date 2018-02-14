@@ -1,10 +1,10 @@
 <title>Admin Page</title><?php
 
 if(isset($_POST["submit"])) {
-	$conn = mysqli_connect("localhost", "root", "", "DatabaseExam");
+	$conn = mysqli_connect("localhost", "root", "", "databaseexam");
 	$username = $_POST["username"];
 	$password = $_POST["password"];
-	$sql = "SELECT id FROM adminuser WHERE username = '$username' AND password = '$password'";
+	$sql = "SELECT id FROM adminusers WHERE username = '$username' AND password = '$password'";
 	$result = $conn->query($sql);
 	if($result->num_rows > 0) {
 		header("Location: userlist.php");

@@ -1,6 +1,6 @@
 <?php
-	$conn = mysqli_connect("localhost", "root", "", "DatabaseExam");
-	$sql = "SELECT id FROM users WHERE 1";
+	$conn = mysqli_connect("localhost", "root", "", "databaseexam");
+	$sql = "SELECT name FROM users WHERE 1";
 	$result = $conn->query($sql);
 ?>
 

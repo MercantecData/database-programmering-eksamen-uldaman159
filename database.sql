@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Vært: 127.0.0.1
--- Genereringstid: 13. 02 2018 kl. 15:40:36
--- Serverversion: 10.1.26-MariaDB
--- PHP-version: 7.1.9
+-- Genereringstid: 14. 02 2018 kl. 12:23:54
+-- Serverversion: 10.1.28-MariaDB
+-- PHP-version: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
